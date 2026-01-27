@@ -1,10 +1,17 @@
-# Agents
+# Weather Agent
 
-A TypeScript-based agents project.
+A TypeScript-based weather agent that provides weather information and forecasts.
 
 ## Description
 
-This project provides a foundation for building and managing agents.
+Weather Agent is an intelligent agent designed to fetch, process, and deliver weather data. It can retrieve current weather conditions, forecasts, and other meteorological information for specified locations.
+
+## Features
+
+- Fetch current weather conditions
+- Get weather forecasts
+- Support for multiple locations
+- Easy-to-use API interface
 
 ## Getting Started
 
@@ -17,8 +24,8 @@ This project provides a foundation for building and managing agents.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gakshita/Agents.git
-   cd Agents
+   git clone https://github.com/makeplane/weather-agent.git
+   cd weather-agent
    ```
 
 2. Install dependencies:
@@ -31,25 +38,42 @@ This project provides a foundation for building and managing agents.
 ```typescript
 import { } from './index';
 
-// Your code here
+// Initialize the weather agent
+// Fetch weather data for a location
+// Process and display results
 ```
 
 ## Project Structure
 
 ```
-Agents/
+weather-agent/
 ├── index.ts       # Main entry point
 └── README.md      # Project documentation
 ```
+
+## API Reference
+
+### Getting Weather Data
+
+The weather agent provides methods to:
+- Query current weather by location
+- Retrieve forecast data
+- Access historical weather information
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
 This project is open source.
 
-## Author
+## Maintainer
 
-[@gakshita](https://github.com/gakshita)
+[Plane](https://github.com/makeplane)
