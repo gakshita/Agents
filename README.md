@@ -144,6 +144,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+**Last Updated:** January 27, 2026
+
+---
+
 <p align="center">
   Made with ❤️ for the developer community
 </p>
