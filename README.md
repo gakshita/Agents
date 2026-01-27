@@ -1,17 +1,16 @@
-# Weather Agent
+# Agents
 
-A TypeScript-based weather agent that provides weather information and forecasts.
+A TypeScript-based project for building intelligent agents.
 
 ## Description
 
-Weather Agent is an intelligent agent designed to fetch, process, and deliver weather data. It can retrieve current weather conditions, forecasts, and other meteorological information for specified locations.
+Agents is a repository for developing and experimenting with intelligent software agents. This project provides a foundation for creating autonomous agents that can perform various tasks and interact with external services.
 
 ## Features
 
-- Fetch current weather conditions
-- Get weather forecasts
-- Support for multiple locations
-- Easy-to-use API interface
+- TypeScript-based agent implementation
+- Modular and extensible architecture
+- Easy to customize and extend
 
 ## Getting Started
 
@@ -24,8 +23,8 @@ Weather Agent is an intelligent agent designed to fetch, process, and deliver we
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/makeplane/weather-agent.git
-   cd weather-agent
+   git clone https://github.com/gakshita/Agents.git
+   cd Agents
    ```
 
 2. Install dependencies:
@@ -38,27 +37,18 @@ Weather Agent is an intelligent agent designed to fetch, process, and deliver we
 ```typescript
 import { } from './index';
 
-// Initialize the weather agent
-// Fetch weather data for a location
-// Process and display results
+// Initialize your agent
+// Configure agent behavior
+// Run the agent
 ```
 
 ## Project Structure
 
 ```
-weather-agent/
+Agents/
 ├── index.ts       # Main entry point
 └── README.md      # Project documentation
 ```
-
-## API Reference
-
-### Getting Weather Data
-
-The weather agent provides methods to:
-- Query current weather by location
-- Retrieve forecast data
-- Access historical weather information
 
 ## Contributing
 
@@ -74,6 +64,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is open source.
 
-## Maintainer
+## Author
 
-[Plane](https://github.com/makeplane)
+[gakshita](https://github.com/gakshita)
