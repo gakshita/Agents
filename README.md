@@ -1,38 +1,41 @@
 # Agents
 
-A TypeScript-based project for building intelligent agents.
+A TypeScript-based framework for building intelligent, autonomous agents.
 
-## Description
+## Overview
 
-Agents is a repository for developing and experimenting with intelligent software agents. This project provides a foundation for creating autonomous agents that can perform various tasks and interact with external services.
+Agents is a lightweight framework for developing and experimenting with intelligent software agents. It provides a foundation for creating autonomous agents that can perform tasks, make decisions, and interact with external services.
 
 ## Features
 
-- TypeScript-based agent implementation
-- Modular and extensible architecture
-- Easy to customize and extend
+- **TypeScript-first** - Full type safety and modern JavaScript features
+- **Modular architecture** - Easily extensible and customizable components
+- **Lightweight** - Minimal dependencies, maximum flexibility
+- **Developer-friendly** - Simple API for rapid agent development
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
+- Node.js v18 or higher
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/gakshita/Agents.git
-   cd Agents
-   ```
+Clone the repository:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/gakshita/Agents.git
+cd Agents
+```
 
-### Usage
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Quick Start
 
 ```typescript
 import { } from './index';
@@ -46,13 +49,13 @@ import { } from './index';
 
 ```
 Agents/
-├── index.ts       # Main entry point
-└── README.md      # Project documentation
+├── index.ts       # Main entry point and exports
+└── README.md      # Documentation
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Here's how to get started:
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -62,8 +65,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is open source.
+This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-[gakshita](https://github.com/gakshita)
+Created by [gakshita](https://github.com/gakshita)
