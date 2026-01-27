@@ -1,5 +1,8 @@
 # Agents
 
+[![GitHub](https://img.shields.io/badge/GitHub-gakshita%2FAgents-blue?logo=github)](https://github.com/gakshita/Agents)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
 A TypeScript-based project for building intelligent agents.
 
 ## Description
@@ -11,6 +14,7 @@ Agents is a repository for developing and experimenting with intelligent softwar
 - TypeScript-based agent implementation
 - Modular and extensible architecture
 - Easy to customize and extend
+- Lightweight and minimal dependencies
 
 ## Getting Started
 
@@ -30,6 +34,11 @@ Agents is a repository for developing and experimenting with intelligent softwar
 2. Install dependencies:
    ```bash
    npm install
+   ```
+
+3. Run the project:
+   ```bash
+   npx ts-node index.ts
    ```
 
 ### Usage
