@@ -114,6 +114,99 @@ Add these to your `package.json`:
 }
 ```
 
+## 🧩 Challenge: The Tricky React Keypress Problem
+
+Here's a brain-teaser for React developers working with keyboard events:
+
+### The Problem
+
+You're building a search component that should:
+1. Update search results as the user types (controlled input)
+2. Close the dropdown when the user presses `Escape`
+3. Submit the search when the user presses `Enter`
+4. Navigate through results with `ArrowUp` and `ArrowDown`
+
+```tsx
+function SearchBox() {
+  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (e.key) {
+      case 'Escape':
+        setIsOpen(false);
+        break;
+      case 'Enter':
+        submitSearch(query);
+        break;
+      case 'ArrowDown':
+        setSelectedIndex(prev => prev + 1);
+        break;
+      case 'ArrowUp':
+        setSelectedIndex(prev => prev - 1);
+        break;
+    }
+  };
+
+  return (
+    <input
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      onKeyDown={handleKeyDown}
+    />
+  );
+}
+```
+
+### The Tricky Parts
+
+1. **Event Order Confusion**: `onKeyDown` fires before `onChange`. If you check `query` in `handleKeyDown` when pressing `Enter`, you might get stale state if the user typed fast!
+
+2. **Composition Events**: For IME (Input Method Editor) users typing in Chinese, Japanese, or Korean, `keydown` events fire during composition but the input isn't finalized yet. Your `Enter` handler might submit incomplete text.
+
+3. **`e.key` vs `e.keyCode` vs `e.code`**: 
+   - `e.keyCode` is deprecated
+   - `e.key` gives you `"Enter"` but can vary by keyboard layout
+   - `e.code` gives you `"Enter"` consistently but ignores remapped keys
+
+4. **Preventing Default Behavior**: Pressing `ArrowDown` in an input moves the cursor to the end. Did you remember `e.preventDefault()`?
+
+5. **The `useCallback` Trap**: If you wrap `handleKeyDown` in `useCallback` with `[query]` as a dependency, you're recreating the function on every keystroke anyway!
+
+### The Solution Hints
+
+```tsx
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  // Ignore events during IME composition
+  if (e.nativeEvent.isComposing) return;
+  
+  switch (e.key) {
+    case 'Escape':
+      setIsOpen(false);
+      e.currentTarget.blur(); // Also unfocus
+      break;
+    case 'Enter':
+      e.preventDefault(); // Prevent form submission if inside a form
+      // Use the current input value, not stale state
+      submitSearch(e.currentTarget.value);
+      break;
+    case 'ArrowDown':
+      e.preventDefault(); // Prevent cursor movement
+      setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      setSelectedIndex(prev => Math.max(prev - 1, 0));
+      break;
+  }
+};
+```
+
+**Bonus Challenge**: How would you handle `Ctrl+A` to select all results vs the browser's native "select all text" behavior?
+
+---
+
 ## Roadmap
 
 - [ ] Core agent framework
