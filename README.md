@@ -4,6 +4,8 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
+**Last Updated:** Thursday, January 29, 2026
+
 A TypeScript-based framework for building intelligent autonomous agents.
 
 ## Overview
