@@ -81,6 +81,28 @@ npx ts-node index.ts
 npx tsc && node dist/index.js
 ```
 
+## Cursor Cloud Agent Setup
+
+If you use Cursor Cloud Agents from Linear, GitHub, or the dashboard, configure a default repository first.
+
+### Set a default repository
+
+1. Open the Cursor dashboard: <https://www.cursor.com/dashboard?tab=cloud-agents>
+2. In **Cloud Agents**, locate **Default Repository**
+3. Enter your repository in `owner/repo` format (for example, `gakshita/Agents`)
+4. (Optional) Set a default branch such as `main`
+5. Save settings and run your agent again
+
+### Troubleshooting
+
+- **`no_default_repository` / "No default repository configured"**
+  - Add a repository in the Cloud Agents dashboard and save
+- **"Could not access repository `<owner>/<repo>`"**
+  - Confirm the repository name is correct
+  - Confirm the repository still exists and was not renamed
+  - Reconnect GitHub/GitLab integration in your Cursor dashboard
+  - Verify the connected account has access to the repository (including private repos/org permissions)
+
 ## Project Structure
 
 ```
