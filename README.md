@@ -6,6 +6,10 @@
 
 A TypeScript-based framework for building intelligent autonomous agents.
 
+## Work Item Status
+
+- Agent assigned to the work item.
+
 ## Overview
 
 **Agents** is a lightweight, extensible foundation for developing intelligent software agents. Whether you're building chatbots, automation tools, or AI-powered assistants, this project provides the scaffolding you need to get started quickly.
