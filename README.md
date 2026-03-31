@@ -6,6 +6,8 @@
 
 A TypeScript-based framework for building intelligent autonomous agents.
 
+> Dummy change for linking PR to Plane work-item P1-1.
+
 ## Overview
 
 **Agents** is a lightweight, extensible foundation for developing intelligent software agents. Whether you're building chatbots, automation tools, or AI-powered assistants, this project provides the scaffolding you need to get started quickly.
