@@ -2,148 +2,104 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-A TypeScript-based framework for building intelligent autonomous agents.
+Minimal TypeScript starter for building autonomous agents.
 
 ## Overview
 
-**Agents** is a lightweight, extensible foundation for developing intelligent software agents. Whether you're building chatbots, automation tools, or AI-powered assistants, this project provides the scaffolding you need to get started quickly.
+This repository is intentionally small and currently includes:
 
-## Key Features
+- `index.ts`: Agent entry point (currently empty)
+- `README.md`: Project documentation
 
-- **TypeScript First** - Built with TypeScript for type safety and better developer experience
-- **Modular Architecture** - Easily extend and customize agent behavior
-- **Lightweight** - Minimal dependencies, maximum flexibility
-- **Easy Integration** - Designed to work with various AI/ML services and APIs
+Use it as a clean base to prototype your own agent runtime, workflows, and integrations.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) 18+
+- npm
 
 ## Getting Started
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- npm, yarn, or pnpm
-
-### Installation
-
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/gakshita/Agents.git
    cd Agents
    ```
 
-2. **Install dependencies:**
+2. Initialize and install development dependencies:
 
    ```bash
-   npm install
-   ```
-
-3. **Set up TypeScript (if not already configured):**
-
-   ```bash
-   npm install -D typescript @types/node
+   npm init -y
+   npm install -D typescript ts-node @types/node
    npx tsc --init
    ```
 
-### Quick Start
+3. Add your first agent implementation to `index.ts`:
 
-```typescript
-// index.ts - Your agent entry point
+   ```typescript
+   type AgentConfig = {
+     name: string;
+     version: string;
+     capabilities: string[];
+   };
 
-// Define your agent configuration
-const agentConfig = {
-  name: 'MyAgent',
-  version: '1.0.0',
-  capabilities: ['chat', 'automation']
-};
+   const agentConfig: AgentConfig = {
+     name: "MyAgent",
+     version: "0.1.0",
+     capabilities: ["chat", "automation"],
+   };
 
-// Initialize and run your agent
-async function main() {
-  console.log(`Starting ${agentConfig.name}...`);
-  
-  // Add your agent logic here
-  // - Connect to APIs
-  // - Process user input
-  // - Execute tasks
-}
+   async function main(): Promise<void> {
+     console.log(`Starting ${agentConfig.name} (${agentConfig.version})`);
+     // Add your agent logic here.
+   }
 
-main().catch(console.error);
-```
+   void main();
+   ```
 
-### Running Your Agent
+4. Run the agent:
 
-```bash
-# Using ts-node for development
-npx ts-node index.ts
+   ```bash
+   npx ts-node index.ts
+   ```
 
-# Or compile and run
-npx tsc && node dist/index.js
-```
+## Suggested `package.json` scripts
 
-## Project Structure
-
-```
-Agents/
-├── index.ts          # Main entry point
-├── README.md         # Project documentation
-├── package.json      # Dependencies and scripts (create as needed)
-└── tsconfig.json     # TypeScript configuration (create as needed)
-```
-
-## Development
-
-### Recommended Extensions (VS Code)
-
-- ESLint
-- Prettier
-- TypeScript Hero
-
-### Scripts
-
-Add these to your `package.json`:
+After setup, add these scripts for convenience:
 
 ```json
 {
   "scripts": {
     "start": "ts-node index.ts",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn index.ts",
-    "lint": "eslint . --ext .ts"
+    "dev": "ts-node --watch index.ts"
   }
 }
 ```
 
+## Project Structure
+
+```text
+Agents/
+├── index.ts
+└── README.md
+```
+
 ## Roadmap
 
-- [ ] Core agent framework
-- [ ] Plugin system for extensibility
-- [ ] Built-in logging and monitoring
-- [ ] Example agents and templates
-- [ ] Documentation and tutorials
+- [ ] Implement a core agent loop
+- [ ] Add modular tools/actions
+- [ ] Add logging and error handling
+- [ ] Add tests and sample agents
 
 ## Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are welcome:
 
-1. **Fork** the repository
-2. **Create** your feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-Please make sure to update tests and documentation as appropriate.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-**gakshita** - [GitHub Profile](https://github.com/gakshita)
-
----
-
-<p align="center">
-  Made with ❤️ for the developer community
-</p>
+1. Fork the repository
+2. Create a branch: `git checkout -b feature/your-change`
+3. Commit your changes
+4. Push your branch
+5. Open a pull request
