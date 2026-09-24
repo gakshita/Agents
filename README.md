@@ -87,10 +87,16 @@ npx tsc && node dist/index.js
 
 ```
 Agents/
+├── src/
+│   ├── agent.ts      # EchoAgent, a baseline implementation
+│   ├── registry.ts   # AgentRegistry, lookup by name
+│   ├── types.ts      # Agent, AgentContext, AgentResult
+│   └── index.ts      # Public API surface
 ├── index.ts          # Main entry point
 ├── README.md         # Project documentation
-├── package.json      # Dependencies and scripts (create as needed)
-└── tsconfig.json     # TypeScript configuration (create as needed)
+├── CONTRIBUTING.md   # How to contribute
+├── package.json      # Dependencies and scripts
+└── tsconfig.json     # TypeScript configuration
 ```
 
 ## Development
