@@ -1,0 +1,15 @@
+{
+  "name": "agents",
+  "version": "0.1.0",
+  "description": "A TypeScript-based framework for building intelligent autonomous agents.",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "author": "gakshita"
+}
